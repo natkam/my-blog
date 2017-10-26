@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from .models import Post
+from .models import Post, Section
 from .forms import PostForm
 
 def post_list(request):
@@ -37,3 +37,7 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def section_detail(request, url_name):
+    section = get_object_or_404(Section, url_name=url_name)
+    return render(request, 'blog/'+url_name+'.html', {'section': section})

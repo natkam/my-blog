@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <div class="section">
+    <h1>{{ section.displayed_name }}</h1>
+    <p>{{ section.content|linebreaksbr }}</p>
+  </div>
+{% endblock %}

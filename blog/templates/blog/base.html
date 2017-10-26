@@ -12,6 +12,9 @@
       {% if user.is_authenticated %}
         <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
       {% endif %}
+      <a href="{% url 'section_detail' url_name='section_2' %}" class="top-menu">Section 2</a>
+      <a href="{% url 'section_detail' url_name='section' %}" class="top-menu">Section</a>
+      <a href="/" class="top-menu">Home page</a>
       <h1><a href="/">Natka's blog</a></h1>
     </div>
     <div class="content container">

@@ -14,3 +14,11 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Section(models.Model):
+    url_name = models.CharField(max_length=50, unique=True)
+    displayed_name = models.CharField(max_length=50, default=url_name)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.displayed_name

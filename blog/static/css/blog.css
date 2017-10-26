@@ -34,10 +34,11 @@ h1, h2, h3, h4 {
     color: #ffffff;
     float: right;
     font-size: 26pt;
-    margin-right: 20px;
+    font-family: 'Lobster';
+    margin-right: 35px;
 }
 
-.post {
+.post, .section {
     margin-bottom: 70px;
 }
 
